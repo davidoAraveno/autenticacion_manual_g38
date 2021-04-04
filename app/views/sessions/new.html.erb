@@ -1,0 +1,5 @@
+<%= form_with(url: s_c_path, model: @session, local: true) do |f| %>
+    <%= f.text_field :email, placeholder: 'ingrese su email' %>
+    <%= f.password_field :password, placeholder: 'ingrese su contraseña' %>
+    <%= f.submit 'entrar' %>
+<% end %>

@@ -12,7 +12,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <% if logged? %>
+      <%= link_to 'cerrar sesion', s_d_path, method: :delete %>
+      <%= render 'shared/navbar' %>
+    <% else %>
+      <%= link_to 'crear usuario', u_n_path %>
+      <%= link_to 'iniciar sesion', s_n_path %>
+    <% end %>
+
     <div class="container">
       <% if notice %>
         <div class="alert alert-dismissible alert-success">

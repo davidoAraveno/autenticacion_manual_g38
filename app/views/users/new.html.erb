@@ -1,0 +1,7 @@
+<%= form_with(url: u_c_path,model: @user, local: true) do |f| %>
+    <%= f.text_field :name, placeholder: 'escribe tu nombre' %>
+    <%= f.text_field :email, placeholder: "ingresa tu email" %>
+    <%= f.password_field :password, placeholder: "crea una pass" %>
+    <%= f.password_field :password_confirmation, placeholder: "repite la pass para confirmarla"%>
+    <%= f.submit 'crear usuario' %>
+<% end %>
